@@ -1,0 +1,160 @@
+html{
+    background-color: black;
+}
+
+
+
+.main {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin: 60px auto;
+    border: 1px solid #eee;
+    background-color: #eee;
+    box-shadow: 10px 10px 10px rgba(241, 234, 234, 0.6);
+}
+
+
+.css-cube {                                      /* 立体の大きさ傾きの指定 */
+  width: 200px;
+  height: 200px;
+  margin: 5%;
+  border: none;
+  transform-style: preserve-3d;                  /* ３Ｄで表示 */
+  transform:rotateY(-30deg) rotateX(-30deg) rotateZ(10deg); /* 立体の傾き */
+  display : inline-block;
+  animation: cubeAnime 2s linear infinite;       /* 動きの指定 */
+}
+@keyframes cubeAnime{                            /* 回転方向の指定 */
+   100% { transform: rotateY(-30deg) rotateX(-30deg) rotateZ(10deg);}
+  100% { transform: rotateY(-30deg) rotateX(330deg) rotateZ(10deg);}
+}
+.css-face {                                      /* 各面の指定 */
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  /*border: 1px solid black;*/
+  line-height: 100px;
+  font-size: 50px;
+  color: black;
+  text-align: center;
+  opacity: 0.5;                                  /* 透明度を指定 */
+  backface-visibility : visible;                 /* 裏面を表示 */
+}
+.css-forward {                                   /* 前面の指定 */
+  /*background: silver;*/
+  transform: translateZ(50px);
+}
+.css-reverse {                                   /* 後面の指定 */
+  /*background: lime;*/
+  transform: rotateY(180deg) translateZ(50px);
+}
+.css-right {                                     /* 右面の指定 */
+  /*background: red;*/
+  transform: rotateY(90deg) translateZ(50px);
+}
+.css-left {                                      /* 左面の指定 */
+  /*background: aqua;*/
+  transform: rotateY(-90deg) translateZ(50px);
+}
+.css-top {                                       /* 上面の指定 */
+  /*background: yellow;*/
+  transform: rotateX(90deg) translateZ(50px);
+}
+.css-bottom {                                    /* 下面の指定 */
+  /*background: fuchsia;*/
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+
+.fadeup{
+  animation-name:fade-in3;
+  animation-duration:4s; 
+  animation-timing-function: ease-out;
+  animation-delay:2s;
+  animation-iteration-count:1;
+  animation-direction:normal; 
+  animation-fill-mode: forwards; 
+}
+
+@keyframes fade-in3 {
+  0% {opacity: 0; transform: translate3d(0,70px,0);}
+  100% {opacity: 1; transform: translate3d(0,0,0);}
+}
+
+
+.img {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    /*margin: 70px;*/
+}
+
+.suta {
+    height: 200px;
+    border-bottom: 1px solid #eee;
+     background-image: url('blue.jpg');
+}
+
+.bg_move{
+    background-image: url('ss15898.jpg');
+    background-size: cover;
+    height: 200px;
+    animation: moveBg 10s infinite linear;
+}
+@keyframes moveBg{
+    100%    { background-position: 0 0; }
+    100%  { background-position: -300px 256px; }
+}
+
+
+.footer {
+    width: 400px;
+    position: absolute;
+    top: 540px;
+    
+    height: 100px;
+    border-top: 1px solid #a7a8b3;
+    padding-top: 15px;
+}
+
+.my-skyblue {
+    color: skyblue
+    
+}
+
+.fa-4x {
+    color: #a7a8b3;
+}
+
+
+.container {
+    position: absolute;
+    top: 450px;
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+    margin-left: 75px;
+}
+
+.text {
+    position: absolute;
+    top: 350px;
+    left: 90px;
+}
+
+.kakedasi {
+    color: #a7a8b3;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.donzoko {
+    color: #a7a8b3;
+    font-size: 30px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    padding-left: 45px;
+}
